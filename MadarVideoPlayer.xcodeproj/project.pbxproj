@@ -12,6 +12,11 @@
 		E2361DDC1F7A896A00BE931E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2361DDA1F7A896A00BE931E /* Main.storyboard */; };
 		E2361DDE1F7A896A00BE931E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2361DDD1F7A896A00BE931E /* Assets.xcassets */; };
 		E2361DE11F7A896A00BE931E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2361DDF1F7A896A00BE931E /* LaunchScreen.storyboard */; };
+		E2361DEB1F7A8A8100BE931E /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2361DE91F7A8A8100BE931E /* VideoCell.swift */; };
+		E2361DEC1F7A8A8100BE931E /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2361DEA1F7A8A8100BE931E /* VideoCell.xib */; };
+		E2361DF31F7A8B8E00BE931E /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2361DF21F7A8B8E00BE931E /* YTPlayerView.m */; };
+		E2361DF61F7A8BBF00BE931E /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2361DF51F7A8BBF00BE931E /* Assets.bundle */; };
+		E2361DFA1F7A8D1A00BE931E /* MadarPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2361DF91F7A8D1A00BE931E /* MadarPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,13 @@
 		E2361DDD1F7A896A00BE931E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2361DE01F7A896A00BE931E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2361DE21F7A896A00BE931E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2361DE91F7A8A8100BE931E /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		E2361DEA1F7A8A8100BE931E /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		E2361DF01F7A8B8D00BE931E /* MadarVideoPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MadarVideoPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2361DF11F7A8B8E00BE931E /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		E2361DF21F7A8B8E00BE931E /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		E2361DF51F7A8BBF00BE931E /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
+		E2361DF91F7A8D1A00BE931E /* MadarPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MadarPlayer.swift; path = Helper/MadarPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				E2361DD51F7A896900BE931E /* MadarVideoPlayer */,
+				E2361DED1F7A8B1500BE931E /* Pods */,
 				E2361DD41F7A896900BE931E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,7 +67,10 @@
 		E2361DD51F7A896900BE931E /* MadarVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				E2361DF81F7A8CD900BE931E /* Helper */,
 				E2361DD61F7A896A00BE931E /* AppDelegate.swift */,
+				E2361DE81F7A8A5800BE931E /* View */,
+				E2361DF71F7A8CB900BE931E /* Controller */,
 				E2361DD81F7A896A00BE931E /* ViewController.swift */,
 				E2361DDA1F7A896A00BE931E /* Main.storyboard */,
 				E2361DDD1F7A896A00BE931E /* Assets.xcassets */,
@@ -62,6 +78,65 @@
 				E2361DE21F7A896A00BE931E /* Info.plist */,
 			);
 			path = MadarVideoPlayer;
+			sourceTree = "<group>";
+		};
+		E2361DE81F7A8A5800BE931E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DE91F7A8A8100BE931E /* VideoCell.swift */,
+				E2361DEA1F7A8A8100BE931E /* VideoCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E2361DED1F7A8B1500BE931E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DEE1F7A8B3600BE931E /* Development Pods */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2361DEE1F7A8B3600BE931E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DEF1F7A8B5A00BE931E /* YouTube-Player-iOS-Helper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E2361DEF1F7A8B5A00BE931E /* YouTube-Player-iOS-Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DF41F7A8BA600BE931E /* Resources */,
+				E2361DF11F7A8B8E00BE931E /* YTPlayerView.h */,
+				E2361DF21F7A8B8E00BE931E /* YTPlayerView.m */,
+				E2361DF01F7A8B8D00BE931E /* MadarVideoPlayer-Bridging-Header.h */,
+			);
+			name = "YouTube-Player-iOS-Helper";
+			sourceTree = "<group>";
+		};
+		E2361DF41F7A8BA600BE931E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DF51F7A8BBF00BE931E /* Assets.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E2361DF71F7A8CB900BE931E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E2361DF81F7A8CD900BE931E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E2361DF91F7A8D1A00BE931E /* MadarPlayer.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +172,7 @@
 					E2361DD21F7A896900BE931E = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = H7274WYC3S;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,7 +200,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2361DF61F7A8BBF00BE931E /* Assets.bundle in Resources */,
 				E2361DE11F7A896A00BE931E /* LaunchScreen.storyboard in Resources */,
+				E2361DEC1F7A8A8100BE931E /* VideoCell.xib in Resources */,
 				E2361DDE1F7A896A00BE931E /* Assets.xcassets in Resources */,
 				E2361DDC1F7A896A00BE931E /* Main.storyboard in Resources */,
 			);
@@ -139,6 +217,9 @@
 			files = (
 				E2361DD91F7A896A00BE931E /* ViewController.swift in Sources */,
 				E2361DD71F7A896A00BE931E /* AppDelegate.swift in Sources */,
+				E2361DF31F7A8B8E00BE931E /* YTPlayerView.m in Sources */,
+				E2361DFA1F7A8D1A00BE931E /* MadarPlayer.swift in Sources */,
+				E2361DEB1F7A8A8100BE931E /* VideoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +344,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H7274WYC3S;
 				INFOPLIST_FILE = MadarVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.madarsoft.MadarVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MadarVideoPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -276,11 +360,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H7274WYC3S;
 				INFOPLIST_FILE = MadarVideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.madarsoft.MadarVideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MadarVideoPlayer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

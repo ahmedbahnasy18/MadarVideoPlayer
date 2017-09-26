@@ -13,7 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var adDisplayed = false
+    var isFullscreenMode = false
+    var fullscreenVC = UIViewController()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -41,6 +44,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if window != self.window, let pvc = window?.rootViewController?.presentedViewController, "\(type(of: pvc))" == "AVFullScreenViewController" {
+            isFullscreenMode = true
+            fullscreenVC = pvc
+            return .portrait
+        }
+  
+        return .portrait
+    }
+    
 }
+
+extension AppDelegate {
+    static func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+}
+
 

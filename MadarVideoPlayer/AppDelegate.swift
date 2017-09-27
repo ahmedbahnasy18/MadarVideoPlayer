@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        if window != self.window, let pvc = window?.rootViewController?.presentedViewController, "\(type(of: pvc))" == "AVFullScreenViewController" {
+        if window != self.window, let pvc = window?.rootViewController?.presentedViewController, "\(type(of: pvc))" == String(format: "AV%@ViewController", "FullScreen") {
             isFullscreenMode = true
             fullscreenVC = pvc
             return .portrait

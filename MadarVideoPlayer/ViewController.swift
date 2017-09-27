@@ -48,6 +48,17 @@ extension ViewController: YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         MadarPlayer.youtubePlayer.playVideo()
     }
+    
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        switch state {
+        case YTPlayerState.ended:
+            MadarPlayer.youtubePlayer.removeFromSuperview()
+            break
+        default:
+            break
+        }
+    }
+    
     func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
         
         let isFullscreenMode = AppDelegate.shared().isFullscreenMode

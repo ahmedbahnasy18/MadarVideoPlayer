@@ -15,7 +15,7 @@ class MadarPlayer: NSObject {
         
         youtubePlayer.frame = CGRect(x: 0, y: 0, width: myView.frame.width, height: myView.frame.height)
         youtubePlayer.backgroundColor = UIColor.black
-        youtubePlayer.load(withVideoId: videoId, playerVars: ["playsinline" : 1, "autoplay" : 1])
+        youtubePlayer.load(withVideoId: videoId, playerVars: ["playsinline" : 1, "autoplay" : 1, "showinfo" : 0])
         myView.addSubview(youtubePlayer)
     }
 }
